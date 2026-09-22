@@ -1,0 +1,92 @@
+const products = {
+  burger: [
+    {
+      src: "assets/images/veggie_mushroom_black_burger.png",
+      name: "Veggie Mushroom Black Burger",
+      ingredients: ["Mixed green salad", "Tomatoes", "Edamame", "Mushrooms"],
+      price: 16.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/all_meat_burger.png",
+      name: "All Meat Burger",
+      ingredients: ["Beef", "Bacon", "Dill pickles", "Smoked cheese", "Ketchup", "BBQ souse"],
+      price: 15.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/beef_red_burger.png",
+      name: "Beef Red Burger",
+      ingredients: ["Beef", "Cheese", "Tomatoes", "Lettuce", "Onion"],
+      price: 14.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/big_chicken_burger.png",
+      name: "Big Chicken Burger",
+      ingredients: ["Chicken", "Cheese", "Tomatoes", "Lettuce", "Onion", "Bell pepper"],
+      price: 15.9,
+      quantity: 0,
+    },
+  ],
+  pizza: [
+    {
+      src: "assets/images/pizza_margherita.png",
+      name: "Margherita",
+      ingredients: ["Tomato Sauce", "Mozzarella"],
+      price: 11.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/pizza_chorizo.png",
+      name: "Chorizo",
+      ingredients: ["Tomato slices", "Mozzarella", "Chorizo"],
+      price: 13.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/pizza_funghi.png",
+      name: "Funghi",
+      ingredients: ["Red onion", "Olives", "Button Mushrooms", "Mozzarella"],
+      price: 12.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/pizza_quattro_formaggi_with_chicken.png",
+      name: "Quattro Formaggi With Chicken",
+      ingredients: ["Chicken", "Mozzarella", "Gorgonzola", "Fontina", "Parmigiano Reggiano"],
+      price: 15.9,
+      quantity: 0,
+    },
+  ],
+  salad: [
+    {
+      src: "assets/images/warm_beef_arugula_salad.png",
+      name: "Warm Beef Arugula Salad",
+      ingredients: ["Beef", "Arugula", "Field salad", "Greek feta", "Cherry tomatoes", "Sun-dried Tomatoes", "Balsamic-vinegar dressing"],
+      price: 16.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/mini_green_salad.png",
+      name: "Mini Green Salad",
+      ingredients: ["Green salad", "Cucumber", "Carrots", "Parsley", "Radishes"],
+      price: 7.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/green_salad_with_sea_food.png",
+      name: "Green Salad With Sea Food",
+      ingredients: ["Mixed greens", "Cherry tomatoes", "Red onion", "Mussels", "Squid rings", "Shrimp", "Dijon mustard-lemon dressing with dill"],
+      price: 16.9,
+      quantity: 0,
+    },
+    {
+      src: "assets/images/vegan_green_salad_with_tofu.png",
+      name: "Vegan Green Salad With Tofu",
+      ingredients: ["Green salad", "Cherry tomatoes", "Cucumber", "Baby spinach", "Edamame", "Radishes", "Bittercress", "Tofu", "Peanuts"],
+      price: 14.9,
+      quantity: 0,
+    },
+  ],
+};
