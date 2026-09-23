@@ -35,4 +35,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
-:root {}
+:root {
+    --primary-clr: #E76C1F;
+    --secondary-clr: #363534;
+    font-family: 'Palanquin', sans-serif;
+}

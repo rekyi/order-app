@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    padding: 1.5rem;
+    background-color: var(--primary-clr);
+
+    display: flex;
+    justify-content: space-between;
+
+    .hamburger-icon {
+        display: none;
+    }
+}
