@@ -7,12 +7,21 @@ body {
 header {
     padding: 1.5rem;
     background-color: var(--primary-clr);
+}
+
+.header-content {
+    max-width: 90rem;
+    margin-inline: auto;
 
     display: flex;
     justify-content: space-between;
 
     .hamburger-icon {
         display: none;
+
+        @media (min-width: 520px) {
+            display: inline;
+        }
     }
 }
 
