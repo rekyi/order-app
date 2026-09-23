@@ -2,8 +2,10 @@ function categoryTemplate(category) {
   return `
   <section class="menu-section">
     <header class="menu-header">
-      <img src="${category.iconSrc}" alt="${category.categoryName}">
-      <h2>${category.categoryName}</h2>
+      <div class="menu-header-content">
+        <img src="${category.iconSrc}" alt="${category.categoryName}">
+        <h2>${category.categoryName}</h2>
+      </div>
     </header>
     <div id="${category.id}" class="menu-wrapper"></div>
   </section>`;

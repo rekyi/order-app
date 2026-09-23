@@ -1,7 +1,7 @@
 const menuArray = [
   {
     id: "burger-menu",
-    categoryName: "Burger & Sandwiches",
+    categoryName: "Burger",
     iconSrc: "assets/icons/burger_icon.webp",
     items: [
       {

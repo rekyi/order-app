@@ -4,7 +4,7 @@ body {
 }
 
 
-header {
+.main-header {
     padding: 1.5rem;
     background-color: var(--primary-clr);
 }
