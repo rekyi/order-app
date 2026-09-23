@@ -7,7 +7,6 @@ function renderMenu() {
     menuContainer.innerHTML += categoryTemplate(category);
 
     const categoryWrapper = document.getElementById(category.id);
-
     for (let productIndex = 0; productIndex < category.items.length; productIndex++) {
       const product = category.items[productIndex];
       categoryWrapper.innerHTML += productTemplate(product);

@@ -17,14 +17,16 @@ function productTemplate(product) {
     <article class="product-card">
       <img src="${product.src}" alt="${product.name}" class="product-image" />
       <div class="product-info">
-        <div class="product-header">
+        <div class="product-row">
           <h3 class="product-title">${product.name}</h3>
           <span class="product-price">${formattedPrice}</span>
         </div>
-        <p class="product-ingredients">${ingredientsText}</p>
-        <button class="add-btn" onclick="addToBasket('${product.name}')">
-          Add to basket
-        </button>
+        <div class="product-row">
+          <p class="product-ingredients">${ingredientsText}</p>
+          <button class="add-btn" onclick="addToBasket('${product.name}')">
+            Add to basket
+          </button>
+        </div>
       </div>
     </article>`;
 }
