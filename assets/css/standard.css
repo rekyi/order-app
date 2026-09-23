@@ -17,7 +17,7 @@ html {
 body {
     min-height: 100vh;
     min-height: 100dvh;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 img, picture, video, canvas, svg {
@@ -38,5 +38,6 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
     --primary-clr: #E76C1F;
     --secondary-clr: #363534;
-    font-family: 'Palanquin', sans-serif;
+    --font-base: 'Palanquin', sans-serif;
+    --font-base-dark: 'Palanquin Dark', sans-serif;
 }
