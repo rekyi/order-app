@@ -15,3 +15,42 @@ header {
         display: none;
     }
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero picture img {
+    width: 100%;
+    padding: 1.5rem 1rem 0 1rem;
+
+    @media (min-width: 520px) {
+        padding: 0;
+        object-fit: cover;
+    }
+}
+
+.hero-logo {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 8.75rem;
+    height: 8.75rem;
+
+    border: 16px solid #FDEADC;
+    border-radius: 50%;
+
+    box-shadow: 2px 4px 4px 0px #00000040;
+
+    @media (min-width: 520px) {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+}
