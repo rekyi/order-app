@@ -2,7 +2,6 @@
     font-family: var(--font-base);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .menu-section {
@@ -65,8 +64,9 @@
 }
 
 .product-card {
-    padding: 0.625rem;
+    padding: 0.625rem 0.625rem 1.125rem 0.625rem;
     border-radius: 12px;
+    color: var(--secondary-clr);
     background-color: #FDEADC;
 
     display: flex;
@@ -91,12 +91,57 @@
 }
 
 .product-info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "title title"
+        "ingredients ingredients"
+        "price button";
     gap: 0.5rem;
+    align-items: center;
 
     @media (min-width: 580px) {
         flex: 1;
-        justify-content: space-between;
+        grid-template-areas:
+            "title price"
+            "ingredients ingredients"
+            "space button";
     }
+}
+
+.product-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: title;
+}
+
+.product-ingredients {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    grid-area: ingredients;
+}
+
+.product-price {
+    padding-right: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: price;
+
+    @media (min-width: 580px) {
+        justify-self: end;
+    }
+}
+
+.add-btn {
+    padding: 0.35rem 0.5rem;
+
+    color: var(--secondary-clr);
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+
+    grid-area: button;
+    cursor: pointer;
 }

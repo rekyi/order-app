@@ -19,16 +19,12 @@ function productTemplate(product) {
     <article class="product-card">
       <img class="product-image" src="${product.src}" alt="${product.name}" width="207" height="121" />
       <div class="product-info">
-        <div class="product-row">
-          <h3 class="product-title">${product.name}</h3>
-          <span class="product-price">${formattedPrice}</span>
-        </div>
-        <div class="product-row">
-          <p class="product-ingredients">${ingredientsText}</p>
-          <button class="add-btn" onclick="addToBasket('${product.name}')">
-            Add to basket
-          </button>
-        </div>
+        <h3 class="product-title">${product.name}</h3>
+        <p class="product-ingredients">${ingredientsText}</p>
+        <span class="product-price">${formattedPrice}</span>
+        <button class="add-btn" onclick="addToBasket('${product.name}')">
+          Add to basket
+        </button>
       </div>
     </article>`;
 }
