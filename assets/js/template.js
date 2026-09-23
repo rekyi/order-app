@@ -3,7 +3,7 @@ function categoryTemplate(category) {
   <section class="menu-section">
     <header class="menu-header">
       <div class="menu-header-content">
-        <img src="${category.iconSrc}" alt="${category.categoryName}">
+        <img src="${category.iconSrc}" alt="${category.categoryName}" width="88" height="91">
         <h2>${category.categoryName}</h2>
       </div>
     </header>
@@ -17,7 +17,7 @@ function productTemplate(product) {
 
   return `
     <article class="product-card">
-      <img src="${product.src}" alt="${product.name}" class="product-image" />
+      <img class="product-image" src="${product.src}" alt="${product.name}" width="207" height="121" />
       <div class="product-info">
         <div class="product-row">
           <h3 class="product-title">${product.name}</h3>
