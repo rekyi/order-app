@@ -1,0 +1,17 @@
+function renderMenu() {
+  const menuContainer = document.getElementById("menu-container");
+  menuContainer.innerHTML = "";
+
+  for (let categoryIndex = 0; categoryIndex < menuArray.length; categoryIndex++) {
+    const category = menuArray[categoryIndex];
+    menuContainer.innerHTML += categoryTemplate(category);
+
+    const categoryWrapper = document.getElementById(category.id);
+
+    for (let productIndex = 0; productIndex < category.items.length; productIndex++) {
+      const product = category.items[productIndex];
+      categoryWrapper.innerHTML += productTemplate(product);
+    }
+  }
+}
+renderMenu();
