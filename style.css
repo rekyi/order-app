@@ -135,3 +135,42 @@ h1 {
     font-weight: 700;
     font-size: clamp(1.125rem, 1.1rem + 0.682vi, 1.5rem);
 }
+
+footer {
+    padding: 2rem;
+    background-color: var(--primary-clr);
+    font-family: var(--font-base);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    a, p {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.125rem;
+        text-align: center;
+    }
+
+    .copyright {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    @media (min-width: 520px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 4.5rem;
+
+        p {
+            order: -1;
+        }
+
+        a, p {
+            text-align: left;
+        }
+    }
+}
