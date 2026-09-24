@@ -1,19 +1,42 @@
 #menu-container {
     font-family: var(--font-base);
+    max-width: 70rem;
+    margin-inline: auto;
+
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 22rem;
+        align-items: start;
+        gap: 2rem;
+    }
 }
 
 .menu-section {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 1024px) {
+        grid-column: 1 / -1;
+    }
 }
 
 .menu-header {
     position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
     margin-block: 5rem 2.5rem;
-    padding: 0.75rem 1rem 0.5rem;
     background-color: var(--primary-clr);
+}
+
+.menu-header-content {
+    position: relative;
+    max-width: 65rem;
+    margin-inline: auto;
+    padding: 0.75rem 1rem 0.5rem;
 
     display: flex;
     flex-direction: column;
@@ -61,6 +84,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media (min-width: 1024px) {
+        max-width: calc(100% - 24rem);
+    }
 }
 
 .product-card {
