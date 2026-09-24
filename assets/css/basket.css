@@ -17,9 +17,23 @@
 }
 
 .basket-header h2 {
+    padding-top: 2rem;
     color: #fdeadc;
     font-family: var(--font-base);
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
+}
+
+.basket-header {
+    position: relative;
+}
+
+.basket-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
