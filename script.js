@@ -31,3 +31,9 @@ function onBackdropClick(event) {
     dialogRef.close();
   }
 }
+
+document.getElementById("basket-items").innerHTML = dialogBasketTemplate({
+  name: "test test asts tststst",
+  price: 16.9,
+  quantity: 2,
+});
