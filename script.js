@@ -14,3 +14,20 @@ function renderMenu() {
   }
 }
 renderMenu();
+
+function initBasketDialog() {
+  const dialogRef = document.getElementById("basket-dialog");
+
+  document.getElementById("cart").addEventListener("click", () => dialogRef.showModal());
+  document.getElementById("basket-close-btn").addEventListener("click", () => dialogRef.close());
+  dialogRef.addEventListener("click", onBackdropClick);
+}
+initBasketDialog();
+
+function onBackdropClick(event) {
+  const dialogRef = event.currentTarget;
+
+  if (event.target === dialogRef) {
+    dialogRef.close();
+  }
+}
