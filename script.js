@@ -35,5 +35,5 @@ function onBackdropClick(event) {
 document.getElementById("basket-items").innerHTML = dialogBasketTemplate({
   name: "test test asts tststst",
   price: 16.9,
-  quantity: 2,
+  quantity: 1,
 });
