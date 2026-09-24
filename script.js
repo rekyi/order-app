@@ -32,8 +32,18 @@ function onBackdropClick(event) {
   }
 }
 
-document.getElementById("basket-items").innerHTML = dialogBasketTemplate({
-  name: "test test asts tststst",
-  price: 16.9,
-  quantity: 1,
-});
+function getAllItems() {
+  const allItems = [];
+
+  for (let categoryIndex = 0; categoryIndex < menuArray.length; categoryIndex++) {
+    const category = menuArray[categoryIndex];
+
+    for (let itemIndex = 0; itemIndex < category.items.length; itemIndex++) {
+      const item = category.items[itemIndex];
+      allItems.push(item);
+    }
+  }
+  return allItems;
+}
+
+console.log(getAllItems());
