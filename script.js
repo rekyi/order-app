@@ -1,6 +1,10 @@
 const FREE_DELIVERY_THRESHOLD = 30;
 const DELIVERY_FEE = 4.99;
 
+function init() {
+  renderBasket();
+}
+
 function renderMenu() {
   const menuContainer = document.getElementById("menu-container");
   menuContainer.innerHTML = "";
@@ -125,6 +129,14 @@ function renderCartCount() {
 
   cartCount.classList.toggle("cart-count", totalQuantity > 0);
   cartCount.innerHTML = totalQuantity > 0 ? displayCount : "";
+}
+
+function addToBasket(name) {
+  console.log("addToBasket läuft", name);
+  const allItems = getAllItems();
+  const foundItem = allItems.find((item) => item.name === name);
+  foundItem.quantity++;
+  renderBasket();
 }
 
 function renderBasket() {
