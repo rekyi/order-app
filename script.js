@@ -1,6 +1,6 @@
-const FREE_DELIVERY_THRESHOLD = 35;
+const FREE_DELIVERY_THRESHOLD = 30;
 const DELIVERY_FEE = 4.99;
-
+renderCartCount();
 function renderMenu() {
   const menuContainer = document.getElementById("menu-container");
   menuContainer.innerHTML = "";
@@ -119,3 +119,12 @@ function renderBasketSummary() {
   document.getElementById("basket-buy-btn").textContent = `Buy now (${formatPrice(total)})`;
 }
 renderBasketSummary();
+
+function renderCartCount() {
+  const totalQuantity = calculateTotalQuantity();
+  const cartCount = document.getElementById("cart-count");
+  const displayCount = totalQuantity > 99 ? "99+" : totalQuantity;
+
+  cartCount.classList.toggle("cart-count", totalQuantity > 0);
+  cartCount.innerHTML = totalQuantity > 0 ? displayCount : "";
+}
