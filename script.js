@@ -80,3 +80,14 @@ function calculateSubtotal() {
   }
   return subtotal;
 }
+
+function calculateTotalQuantity() {
+  const basketItems = getBasketItems();
+  let totalQuantity = 0;
+
+  for (let basketItemIndex = 0; basketItemIndex < basketItems.length; basketItemIndex++) {
+    const item = basketItems[basketItemIndex];
+    totalQuantity += item.quantity;
+  }
+  return totalQuantity;
+}

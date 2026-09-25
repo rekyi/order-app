@@ -9,14 +9,14 @@ const menuArray = [
         name: "Veggie Mushroom Black Burger",
         ingredients: ["Mixed green salad", "Tomatoes", "Edamame", "Mushrooms"],
         price: 16.9,
-        quantity: 0,
+        quantity: 1,
       },
       {
         src: "assets/images/all_meat_burger.webp",
         name: "All Meat Burger",
         ingredients: ["Beef", "Bacon", "Dill pickles", "Smoked cheese", "Ketchup", "BBQ souse"],
         price: 15.9,
-        quantity: 0,
+        quantity: 4,
       },
       {
         src: "assets/images/beef_red_burger.webp",
