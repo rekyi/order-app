@@ -57,3 +57,15 @@ function getBasketItems() {
   }
   return basketItems;
 }
+
+function renderBasketItems() {
+  const basketItems = getBasketItems();
+  const basketRef = document.getElementById("basket-items");
+  basketRef.innerHTML = "";
+
+  for (let index = 0; index < basketItems.length; index++) {
+    const item = basketItems[index];
+    basketRef.innerHTML += dialogBasketTemplate(item);
+  }
+}
+renderBasketItems();
