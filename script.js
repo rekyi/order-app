@@ -63,9 +63,20 @@ function renderBasketItems() {
   const basketRef = document.getElementById("basket-items");
   basketRef.innerHTML = "";
 
-  for (let index = 0; index < basketItems.length; index++) {
-    const item = basketItems[index];
+  for (let basketItemIndex = 0; basketItemIndex < basketItems.length; basketItemIndex++) {
+    const item = basketItems[basketItemIndex];
     basketRef.innerHTML += dialogBasketTemplate(item);
   }
 }
 renderBasketItems();
+
+function calculateSubtotal() {
+  const basketItems = getBasketItems();
+  let subtotal = 0;
+
+  for (let basketItemIndex = 0; basketItemIndex < basketItems.length; basketItemIndex++) {
+    const item = basketItems[basketItemIndex];
+    subtotal += item.quantity * item.price;
+  }
+  return subtotal;
+}

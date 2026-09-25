@@ -139,3 +139,12 @@
     border-radius: 60px;
     cursor: pointer;
 }
+
+#basket-items:empty::before {
+    padding: 2rem 0;
+    content: "Fill your Basket\AYour basket is empty";
+    white-space: pre-line;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2;
+}
