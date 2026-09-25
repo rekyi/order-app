@@ -148,3 +148,22 @@
     font-size: 1.5rem;
     line-height: 2;
 }
+
+.basket-delivery {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+}
+
+.delivery-fee-original {
+    font-family: system-ui, -apple-system, sans-serif;
+    text-decoration: line-through;
+    opacity: 0.5;
+    font-size: 0.9em;
+}
+
+.delivery-fee-free {
+    font-weight: 700;
+    color: var(--primary-clr);
+    font-size: 1em;
+}

@@ -1,3 +1,6 @@
+const FREE_DELIVERY_THRESHOLD = 35;
+const DELIVERY_FEE = 4.99;
+
 function renderMenu() {
   const menuContainer = document.getElementById("menu-container");
   menuContainer.innerHTML = "";
@@ -96,3 +99,23 @@ function formatPrice(number) {
   const formattedPrice = number.toFixed(2).replace(".", ",") + "€";
   return formattedPrice;
 }
+
+function getDeliveryFeeText(deliveryFee) {
+  if (deliveryFee === 0) {
+    return `<span class="delivery-fee-original">${formatPrice(DELIVERY_FEE)}</span> <span class="delivery-fee-free">Free</span>`;
+  } else {
+    return formatPrice(deliveryFee);
+  }
+}
+
+function renderBasketSummary() {
+  const subtotal = calculateSubtotal();
+  const deliveryFee = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
+  const total = subtotal + deliveryFee;
+
+  document.getElementById("basket-subtotal").textContent = formatPrice(subtotal);
+  document.getElementById("basket-delivery").innerHTML = getDeliveryFeeText(deliveryFee);
+  document.getElementById("basket-total").textContent = formatPrice(total);
+  document.getElementById("basket-buy-btn").textContent = `Buy now (${formatPrice(total)})`;
+}
+renderBasketSummary();
