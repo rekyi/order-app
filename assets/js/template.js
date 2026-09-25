@@ -13,7 +13,7 @@ function categoryTemplate(category) {
 
 function productTemplate(product) {
   const ingredientsText = product.ingredients.join(", ");
-  const formattedPrice = product.price.toFixed(2).replace(".", ",") + "€";
+  const formattedPrice = formatPrice(product.price);
 
   return `
     <article class="product-card">
@@ -30,7 +30,7 @@ function productTemplate(product) {
 }
 
 function dialogBasketTemplate(item) {
-  const linePrice = (item.price * item.quantity).toFixed(2).replace(".", ",") + "€";
+  const linePrice = formatPrice(item.price * item.quantity);
   let removeBtn = "";
 
   if (item.quantity > 1) {

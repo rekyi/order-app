@@ -91,3 +91,8 @@ function calculateTotalQuantity() {
   }
   return totalQuantity;
 }
+
+function formatPrice(number) {
+  const formattedPrice = number.toFixed(2).replace(".", ",") + "€";
+  return formattedPrice;
+}
