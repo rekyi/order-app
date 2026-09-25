@@ -46,4 +46,14 @@ function getAllItems() {
   return allItems;
 }
 
-console.log(getAllItems());
+function getBasketItems() {
+  const allItems = getAllItems();
+  const basketItems = [];
+
+  for (let allItemsIndex = 0; allItemsIndex < allItems.length; allItemsIndex++) {
+    if (allItems[allItemsIndex].quantity > 0) {
+      basketItems.push(allItems[allItemsIndex]);
+    }
+  }
+  return basketItems;
+}
