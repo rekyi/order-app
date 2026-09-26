@@ -162,6 +162,8 @@
 
 .add-btn {
     padding: 0.35rem 0.5rem;
+    min-width: 6.5rem;
+    gap: 0.3rem;
 
     color: var(--secondary-clr);
     background-color: #ffffff;
@@ -169,6 +171,16 @@
     border: none;
     font-weight: 600;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     grid-area: button;
     cursor: pointer;
+}
+
+.add-btn-count {
+    display: inline-block;
+    min-width: 1.2em;
+    text-align: center;
 }

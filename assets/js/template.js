@@ -16,8 +16,9 @@ function productTemplate(product) {
   const formattedPrice = formatPrice(product.price);
   let addBtn = "";
 
-  if (product.quantity > 0) addBtn = `<button class="add-btn" disabled>Added ${product.quantity}</button>`;
-  else {
+  if (product.quantity > 0) {
+    addBtn = `<button class="add-btn" disabled>Added <span class="add-btn-count">${product.quantity}</span></button>`;
+  } else {
     addBtn = `<button class="add-btn" onclick="increaseQuantity('${product.name}')">Add to basket</button>`;
   }
   return `
