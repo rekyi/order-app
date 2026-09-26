@@ -40,7 +40,7 @@ function dialogBasketTemplate(item) {
     removeBtn = `<button class="basket-remove-btn" type="button" onclick="decreaseQuantity('${item.name}')" aria-label="Decrease quantity">-</button>`;
   } else {
     removeBtn = `
-      <button class="basket-remove-btn" type="button" aria-label="Remove item">
+      <button class="basket-remove-btn" type="button" onclick="decreaseQuantity('${item.name}')" aria-label="Remove item">
         <img src="assets/icons/delete_icon.svg" alt="" width="16" height="18" />
       </button>`;
   }
