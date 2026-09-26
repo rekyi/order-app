@@ -10,7 +10,7 @@ function init() {
 init();
 
 function renderMenu() {
-  const menuContainer = document.getElementById("menu-container");
+  const menuContainer = document.getElementById("menu-categories");
   menuContainer.innerHTML = "";
 
   for (let categoryIndex = 0; categoryIndex < menuArray.length; categoryIndex++) {

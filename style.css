@@ -19,7 +19,7 @@ body {
     .hamburger-icon {
         display: none;
 
-        @media (min-width: 520px) {
+        @media (min-width: 1000px) {
             display: inline;
         }
     }
@@ -35,7 +35,7 @@ main {
     max-width: 90rem;
     position: relative;
 
-    @media (min-width: 520px) {
+    @media (min-width: 1000px) {
         margin-inline: auto;
     }
 }
@@ -44,7 +44,7 @@ main {
     width: 100%;
     padding: 1.5rem 1rem 0 1rem;
 
-    @media (min-width: 520px) {
+    @media (min-width: 768px) {
         padding: 0;
         object-fit: cover;
     }
@@ -63,7 +63,7 @@ main {
 
     box-shadow: 2px 4px 4px 0px #00000040;
 
-    @media (min-width: 520px) {
+    @media (min-width: 1000px) {
         width: 12.5rem;
         height: 12.5rem;
     }
@@ -74,7 +74,7 @@ main {
     margin-top: 5rem;
     text-align: center;
 
-    @media (min-width: 520px) {
+    @media (min-width: 1000px) {
         padding-top: 1rem;
     }
 }
@@ -84,7 +84,7 @@ main {
     flex-direction: column-reverse;
     align-items: center;
 
-    @media (min-width: 520px) {
+    @media (min-width: 1000px) {
         margin-bottom: 1.5rem;
         flex-direction: row;
         justify-content: center;
@@ -133,7 +133,7 @@ h1 {
         color: var(--primary-clr);
     }
 
-    @media (min-width: 520px) {
+    @media (min-width: 1000px) {
         margin-top: 0;
     }
 }
@@ -169,7 +169,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    @media (min-width: 585px) {
+    @media (min-width: 1000px) {
         margin-top: 6rem;
         padding: 2rem;
         flex-direction: row;
@@ -200,7 +200,7 @@ footer {
     justify-content: space-around;
     align-items: center;
 
-    @media (min-width: 585px) {
+    @media (min-width: 1000px) {
         display: none;
     }
 }
