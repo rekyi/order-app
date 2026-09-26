@@ -14,10 +14,11 @@ function categoryTemplate(category) {
 function productTemplate(product) {
   const ingredientsText = product.ingredients.join(", ");
   const formattedPrice = formatPrice(product.price);
+  const displayQuantity = product.quantity > 99 ? "99+" : product.quantity;
   let addBtn = "";
 
   if (product.quantity > 0) {
-    addBtn = `<button class="add-btn" disabled>Added <span class="add-btn-count">${product.quantity}</span></button>`;
+    addBtn = `<button class="add-btn" disabled>Added <span class="add-btn-count">${displayQuantity}</span></button>`;
   } else {
     addBtn = `<button class="add-btn" onclick="increaseQuantity('${product.name}')">Add to basket</button>`;
   }
