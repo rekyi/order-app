@@ -18,7 +18,7 @@ function productTemplate(product) {
 
   if (product.quantity > 0) addBtn = `<button class="add-btn" disabled>Added ${product.quantity}</button>`;
   else {
-    addBtn = `<button class="add-btn" onclick="addToBasket('${product.name}')">Add to basket</button>`;
+    addBtn = `<button class="add-btn" onclick="increaseQuantity('${product.name}')">Add to basket</button>`;
   }
   return `
   <article class="product-card">
@@ -37,7 +37,7 @@ function dialogBasketTemplate(item) {
   let removeBtn = "";
 
   if (item.quantity > 1) {
-    removeBtn = `<button class="basket-remove-btn" type="button" aria-label="Decrease quantity">-</button>`;
+    removeBtn = `<button class="basket-remove-btn" type="button" onclick="decreaseQuantity('${item.name}')" aria-label="Decrease quantity">-</button>`;
   } else {
     removeBtn = `
       <button class="basket-remove-btn" type="button" aria-label="Remove item">
@@ -52,7 +52,7 @@ function dialogBasketTemplate(item) {
         <div class="basket-item-controls">
           ${removeBtn}
           <span class="basket-item-amount">${item.quantity}</span>
-          <button class="basket-add-btn" type="button" aria-label="Increase quantity">+</button>
+          <button class="basket-add-btn" type="button" onclick="increaseQuantity('${item.name}')" aria-label="Increase quantity">+</button>
         </div>
         <span class="basket-item-price">${linePrice}</span>
       </div>

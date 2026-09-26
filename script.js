@@ -131,15 +131,28 @@ function renderCartCount() {
   cartCount.innerHTML = totalQuantity > 0 ? displayCount : "";
 }
 
-function addToBasket(name) {
+function changeQuantity(name, amount) {
   const allItems = getAllItems();
   const foundItem = allItems.find((item) => item.name === name);
-  foundItem.quantity++;
-  renderBasket();
+  foundItem.quantity += amount;
+  renderAll();
+}
+
+function increaseQuantity(name) {
+  changeQuantity(name, 1);
+}
+
+function decreaseQuantity(name) {
+  changeQuantity(name, -1);
 }
 
 function renderBasket() {
   renderBasketItems();
   renderBasketSummary();
   renderCartCount();
+}
+
+function renderAll() {
+  renderMenu();
+  renderBasket();
 }
