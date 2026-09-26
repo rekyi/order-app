@@ -2,8 +2,12 @@ const FREE_DELIVERY_THRESHOLD = 30;
 const DELIVERY_FEE = 4.99;
 
 function init() {
+  renderMenu();
+  initBasketDialog();
   renderBasket();
+  initConfirmationDialog();
 }
+init();
 
 function renderMenu() {
   const menuContainer = document.getElementById("menu-container");
@@ -151,6 +155,24 @@ function increaseQuantity(name) {
 
 function decreaseQuantity(name) {
   changeQuantity(name, -1);
+}
+
+function buyNow() {
+  const allItems = getAllItems();
+
+  for (let index = 0; index < allItems.length; index++) {
+    allItems[index].quantity = 0;
+  }
+
+  document.getElementById("basket-dialog").close();
+  renderAll();
+  document.getElementById("confirmation-dialog").showModal();
+}
+
+function initConfirmationDialog() {
+  const confirmationDialogRef = document.getElementById("confirmation-dialog");
+  document.getElementById("confirmation-close-btn").addEventListener("click", () => confirmationDialogRef.close());
+  confirmationDialogRef.addEventListener("click", onBackdropClick);
 }
 
 function renderBasket() {

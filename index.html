@@ -109,7 +109,17 @@
           <dd id="basket-total"></dd>
         </dl>
       </div>
-      <button id="basket-buy-btn" class="basket-buy-btn"></button>
+      <button id="basket-buy-btn" class="basket-buy-btn" onclick="buyNow()"></button>
+    </dialog>
+
+    <dialog id="confirmation-dialog" class="confirmation-dialog" aria-labelledby="confirmation-title">
+      <header class="confirmation-header">
+        <h2 id="confirmation-title">Order confirmed!</h2>
+        <p>Your food is on the way!</p>
+        <button class="confirmation-close-btn" id="confirmation-close-btn" aria-label="Close confirmation">
+          <img src="assets/icons/close_icon.svg" alt="Close button" width="16" height="16" />
+        </button>
+      </header>
     </dialog>
 
     <script src="assets/js/db.js"></script>
