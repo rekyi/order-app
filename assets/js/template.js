@@ -14,19 +14,22 @@ function categoryTemplate(category) {
 function productTemplate(product) {
   const ingredientsText = product.ingredients.join(", ");
   const formattedPrice = formatPrice(product.price);
+  let addBtn = "";
 
+  if (product.quantity > 0) addBtn = `<button class="add-btn" disabled>Added ${product.quantity}</button>`;
+  else {
+    addBtn = `<button class="add-btn" onclick="addToBasket('${product.name}')">Add to basket</button>`;
+  }
   return `
-    <article class="product-card">
-      <img class="product-image" src="${product.src}" alt="${product.name}" width="207" height="121" />
-      <div class="product-info">
-        <h3 class="product-title">${product.name}</h3>
-        <p class="product-ingredients">${ingredientsText}</p>
-        <span class="product-price">${formattedPrice}</span>
-        <button class="add-btn" onclick="addToBasket('${product.name}')">
-          Add to basket
-        </button>
-      </div>
-    </article>`;
+  <article class="product-card">
+    <img class="product-image" src="${product.src}" alt="${product.name}" width="207" height="121" />
+    <div class="product-info">
+      <h3 class="product-title">${product.name}</h3>
+      <p class="product-ingredients">${ingredientsText}</p>
+      <span class="product-price">${formattedPrice}</span>
+      ${addBtn}
+    </div>
+  </article>`;
 }
 
 function dialogBasketTemplate(item) {

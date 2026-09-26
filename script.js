@@ -132,7 +132,6 @@ function renderCartCount() {
 }
 
 function addToBasket(name) {
-  console.log("addToBasket läuft", name);
   const allItems = getAllItems();
   const foundItem = allItems.find((item) => item.name === name);
   foundItem.quantity++;
