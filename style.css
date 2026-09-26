@@ -58,7 +58,7 @@ main {
     width: 8.75rem;
     height: 8.75rem;
 
-    border: 16px solid #FDEADC;
+    border: 16px solid var(--tertiary-clr);
     border-radius: 50%;
 
     box-shadow: 2px 4px 4px 0px #00000040;

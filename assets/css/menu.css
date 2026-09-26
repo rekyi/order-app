@@ -94,7 +94,7 @@
     padding: 0.625rem 0.625rem 1.125rem 0.625rem;
     border-radius: 12px;
     color: var(--secondary-clr);
-    background-color: #FDEADC;
+    background-color: var(--tertiary-clr);
 
     display: flex;
     flex-direction: column;

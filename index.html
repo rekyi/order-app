@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/standard.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="assets/css/menu.css" />
-    <link rel="stylesheet" href="assets/css/basket.css" />
+    <link rel="stylesheet" href="assets/css/dialog.css" />
   </head>
   <body>
     <header class="main-header">
@@ -113,13 +113,12 @@
     </dialog>
 
     <dialog id="confirmation-dialog" class="confirmation-dialog" aria-labelledby="confirmation-title">
-      <header class="confirmation-header">
-        <h2 id="confirmation-title">Order confirmed!</h2>
-        <p>Your food is on the way!</p>
-        <button class="confirmation-close-btn" id="confirmation-close-btn" aria-label="Close confirmation">
-          <img src="assets/icons/close_icon.svg" alt="Close button" width="16" height="16" />
-        </button>
-      </header>
+      <button class="confirmation-close-btn" id="confirmation-close-btn" aria-label="Close confirmation">
+        <img src="assets/icons/close_icon.svg" alt="" width="16" height="16" />
+      </button>
+      <img src="assets/icons/order_conformation.webp" alt="Order on your way" width="80" height="57" />
+      <h2>Order confirmed!</h2>
+      <p>Your food is on the way!</p>
     </dialog>
 
     <script src="assets/js/db.js"></script>
