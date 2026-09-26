@@ -122,6 +122,13 @@ function renderBasketSummary() {
   document.getElementById("basket-buy-btn").textContent = `Buy now (${formatPrice(total)})`;
 }
 
+function toggleBasketSummaryVisibility() {
+  const isEmpty = getBasketItems().length === 0;
+
+  document.getElementById("basket-summary").classList.toggle("hidden", isEmpty);
+  document.getElementById("basket-buy-btn").classList.toggle("hidden", isEmpty);
+}
+
 function renderCartCount() {
   const totalQuantity = calculateTotalQuantity();
   const cartCount = document.getElementById("cart-count");
@@ -150,6 +157,7 @@ function renderBasket() {
   renderBasketItems();
   renderBasketSummary();
   renderCartCount();
+  toggleBasketSummaryVisibility();
 }
 
 function renderAll() {

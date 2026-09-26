@@ -167,3 +167,7 @@
     color: var(--primary-clr);
     font-size: 1em;
 }
+
+.hidden {
+    display: none;
+}
