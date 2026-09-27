@@ -4,7 +4,7 @@ body {
 }
 
 .main-header {
-    padding: 1.5rem;
+    padding: 0.5rem;
     background-color: var(--primary-clr);
 }
 
@@ -14,10 +14,16 @@ body {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .hamburger-icon {
         position: relative;
     }
+}
+
+.order-logo {
+    width: 80px;
+    height: auto;
 }
 
 .hamburger-btn {

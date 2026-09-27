@@ -24,7 +24,7 @@ function productTemplate(product) {
   }
   return `
   <article class="product-card">
-    <img class="product-image" src="${product.src}" alt="${product.name}" width="800" height="800" loading="lazy" />
+    <img class="product-image" src="${product.src}" alt="" width="800" height="800" loading="lazy" />
     <div class="product-info">
       <h3 class="product-title">${product.name}</h3>
       <p class="product-ingredients">${ingredientsText}</p>
