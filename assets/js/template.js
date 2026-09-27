@@ -3,7 +3,7 @@ function categoryTemplate(category) {
   <section class="menu-section">
     <header class="menu-header">
       <div class="menu-header-content">
-        <img src="${category.iconSrc}" alt="${category.categoryName}" width="88" height="91">
+        <img src="${category.iconSrc}" alt="${category.categoryName}" width="128" height="128">
         <h2>${category.categoryName}</h2>
       </div>
     </header>

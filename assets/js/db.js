@@ -55,8 +55,8 @@ const menuArray = [
       },
       {
         src: "assets/images/pizza_pineapple.webp",
-        name: "Special Pineapple Pizza",
-        ingredients: ["BBQ Sauce", "Mozzarella", "Pulled Chicken", "Pineapple", "Red Onions", "Fresh Cilantro"],
+        name: "Pineapple Pizza",
+        ingredients: ["Mozzarella", "Prosciutto", "Pineapple", "Fresh Basil"],
         price: 12.9,
         quantity: 0,
       },
@@ -89,8 +89,8 @@ const menuArray = [
         quantity: 0,
       },
       {
-        src: "assets/images/melting_lasagna_bolognese.webp",
-        name: "Lasagne",
+        src: "assets/images/lasagna.webp",
+        name: "Lasagna",
         ingredients: ["Slow-Cooked Beef Ragù", "Creamy Béchamel Sauce", "Melted Mozzarella", "Grated Parmesan", "Fresh Basil"],
         price: 12.9,
         quantity: 0,
