@@ -29,9 +29,19 @@ renderMenu();
 function initBasketDialog() {
   const dialogRef = document.getElementById("basket-dialog");
 
-  document.getElementById("cart").addEventListener("click", () => dialogRef.showModal());
+  document.getElementById("cart").addEventListener("click", () => {
+    dialogRef.showModal();
+    requestAnimationFrame(() => {
+      dialogRef.classList.add("slide-up");
+    });
+  });
+
   document.getElementById("basket-close-btn").addEventListener("click", () => dialogRef.close());
   dialogRef.addEventListener("click", onBackdropClick);
+
+  dialogRef.addEventListener("close", () => {
+    dialogRef.classList.remove("slide-up");
+  });
 }
 initBasketDialog();
 

@@ -5,10 +5,8 @@ function categoryTemplate(category) {
       <div class="menu-header-content">
         <img src="${category.iconSrc}" alt="${category.categoryName}" width="88" height="91">
         <h2>${category.categoryName}</h2>
-        
       </div>
     </header>
-    
     <div id="${category.id}" class="menu-wrapper"></div>
   </section>`;
 }

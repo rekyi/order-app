@@ -1,7 +1,6 @@
 @media (min-width: 1000px) {
     .basket-wrapper {
         position: sticky;
-        margin-top: -5.5rem;
         top: 0;
         grid-column: 3;
         grid-row: 2;
@@ -9,11 +8,10 @@
 }
 
 .basket-dialog {
-    position: relative;
-    width: 22rem;
-    padding: 1.5rem 1.25rem;
-    margin-block: auto 0;
+    inset: auto 0 4.6rem 0;
+    width: 23rem;
     margin-inline: auto;
+    padding: 1.5rem 1.25rem;
 
     color: #ffffff;
     background-color: var(--secondary-clr);
@@ -22,7 +20,30 @@
     border-radius: 30px 30px 0 0;
 
     @media (min-width: 1000px) {
+        position: static;
+        max-width: none;
+        margin-inline: 0;
         display: block;
+        transform: none;
+        border-radius: 30px;
+    }
+}
+
+.basket-dialog.slide-up {
+    animation: basket-bounce-in 0.8s ease-in-out forwards;
+}
+
+@keyframes basket-bounce-in {
+    0% {
+        transform: translateY(100%);
+    }
+
+    60% {
+        transform: translateY(-8%);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -53,9 +74,14 @@
     background: transparent;
     border: none;
     cursor: pointer;
+
+    @media (min-width: 1000px) {
+        display: none;
+    }
 }
 
 .basket-items {
+    max-height: 23rem;
     margin: 0 0 1.5rem 0;
     padding: 0;
 
@@ -64,6 +90,16 @@
     gap: 0.75rem;
 
     list-style: none;
+    overflow-y: auto;
+}
+
+.basket-items::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.basket-items::-webkit-scrollbar-thumb {
+    background-color: var(--primary-clr);
+    border-radius: 10px;
 }
 
 .basket-item {
