@@ -140,7 +140,7 @@ function renderBasketSummary() {
   document.getElementById("basket-subtotal").textContent = formatPrice(subtotal);
   document.getElementById("basket-delivery").innerHTML = getDeliveryFeeText(deliveryFee);
   document.getElementById("basket-total").textContent = formatPrice(total);
-  document.getElementById("basket-buy-btn").textContent = `Buy now (${formatPrice(total)})`;
+  document.getElementById("basket-buy-btn").textContent = `Go to checkout`;
 }
 
 function toggleBasketSummaryVisibility() {
