@@ -3,7 +3,6 @@ body {
     flex-direction: column;
 }
 
-
 .main-header {
     padding: 1.5rem;
     background-color: var(--primary-clr);
@@ -44,7 +43,7 @@ main {
     width: 100%;
     padding: 1.5rem 1rem 0 1rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 650px) {
         padding: 0;
         object-fit: cover;
     }
@@ -241,7 +240,6 @@ footer {
     font-size: 0.7rem;
     font-family: system-ui, -apple-system, sans-serif;
     font-weight: 700;
-    /* font-variant-numeric: tabular-nums; */
     border-radius: 999px;
     border: 1px solid #3b3b3b;
 
