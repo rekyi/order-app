@@ -197,12 +197,26 @@
 }
 
 #basket-items:empty::before {
-    padding: 2rem 0;
-    content: "Fill your Basket\AYour basket is empty";
-    white-space: pre-line;
+    content: "We know you can't cook.";
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2;
+}
+
+#basket-items:empty::after {
+    content: "";
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 1rem;
+    background-image: url("../images/empty_basket_filler.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: 1000px) {
+        width: 264px;
+        height: 264px;
+    }
 }
 
 .basket-delivery {
