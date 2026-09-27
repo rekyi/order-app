@@ -104,7 +104,6 @@ main {
 
     border: 16px solid var(--tertiary-clr);
     border-radius: 50%;
-
     box-shadow: 2px 4px 4px 0px #00000040;
 
     @media (min-width: 1000px) {
@@ -148,7 +147,6 @@ main {
 
     display: flex;
     align-items: center;
-
 
     .rating-star {
         font-size: 2rem;
