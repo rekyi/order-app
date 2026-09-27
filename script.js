@@ -6,10 +6,9 @@ function init() {
   renderCategorySlider();
   initCategorySlider();
   initBasketDialog();
-  renderBasket();
   initConfirmationDialog();
+  renderBasket();
 }
-init();
 
 function renderMenu() {
   const menuContainer = document.getElementById("menu-categories");
@@ -56,19 +55,22 @@ function initBasketDialog() {
       dialogRef.classList.add("slide-up");
     });
   });
-
   document.getElementById("basket-close-btn").addEventListener("click", () => dialogRef.close());
   dialogRef.addEventListener("click", onBackdropClick);
-
   dialogRef.addEventListener("close", () => {
     dialogRef.classList.remove("slide-up");
   });
-
   desktopBreakpoint.addEventListener("change", (event) => {
     if (event.matches && dialogRef.open) {
       dialogRef.close();
     }
   });
+}
+
+function initConfirmationDialog() {
+  const confirmationDialogRef = document.getElementById("confirmation-dialog");
+  document.getElementById("confirmation-close-btn").addEventListener("click", () => confirmationDialogRef.close());
+  confirmationDialogRef.addEventListener("click", onBackdropClick);
 }
 
 function onBackdropClick(event) {
@@ -105,17 +107,6 @@ function getBasketItems() {
   return basketItems;
 }
 
-function renderBasketItems() {
-  const basketItems = getBasketItems();
-  const basketRef = document.getElementById("basket-items");
-  basketRef.innerHTML = "";
-
-  for (let basketItemIndex = 0; basketItemIndex < basketItems.length; basketItemIndex++) {
-    const item = basketItems[basketItemIndex];
-    basketRef.innerHTML += dialogBasketTemplate(item);
-  }
-}
-
 function calculateSubtotal() {
   const basketItems = getBasketItems();
   let subtotal = 0;
@@ -138,6 +129,14 @@ function calculateTotalQuantity() {
   return totalQuantity;
 }
 
+function calculateDiscount(subtotal) {
+  if (subtotal >= 50) {
+    return subtotal * 0.05;
+  } else {
+    return 0;
+  }
+}
+
 function formatPrice(number) {
   const formattedPrice = number.toFixed(2).replace(".", ",") + "€";
   return formattedPrice;
@@ -151,11 +150,14 @@ function getDeliveryFeeText(deliveryFee) {
   }
 }
 
-function calculateDiscount(subtotal) {
-  if (subtotal >= 50) {
-    return subtotal * 0.05;
-  } else {
-    return 0;
+function renderBasketItems() {
+  const basketItems = getBasketItems();
+  const basketRef = document.getElementById("basket-items");
+  basketRef.innerHTML = "";
+
+  for (let basketItemIndex = 0; basketItemIndex < basketItems.length; basketItemIndex++) {
+    const item = basketItems[basketItemIndex];
+    basketRef.innerHTML += dialogBasketTemplate(item);
   }
 }
 
@@ -191,6 +193,18 @@ function renderCartCount() {
   cartCount.innerHTML = totalQuantity > 0 ? displayCount : "";
 }
 
+function renderBasket() {
+  renderBasketItems();
+  renderBasketSummary();
+  renderCartCount();
+  toggleBasketSummaryVisibility();
+}
+
+function renderAll() {
+  renderMenu();
+  renderBasket();
+}
+
 function changeQuantity(name, amount) {
   const allItems = getAllItems();
   const foundItem = allItems.find((item) => item.name === name);
@@ -209,29 +223,16 @@ function decreaseQuantity(name) {
 function buyNow() {
   const allItems = getAllItems();
 
-  for (let index = 0; index < allItems.length; index++) {
-    allItems[index].quantity = 0;
+  for (let allItemsIndex = 0; allItemsIndex < allItems.length; allItemsIndex++) {
+    allItems[allItemsIndex].quantity = 0;
   }
-
   document.getElementById("basket-dialog").close();
   renderAll();
-  document.getElementById("confirmation-dialog").showModal();
-}
 
-function initConfirmationDialog() {
   const confirmationDialogRef = document.getElementById("confirmation-dialog");
-  document.getElementById("confirmation-close-btn").addEventListener("click", () => confirmationDialogRef.close());
-  confirmationDialogRef.addEventListener("click", onBackdropClick);
+  confirmationDialogRef.showModal();
+  setTimeout(() => {
+    confirmationDialogRef.close();
+  }, 3000);
 }
-
-function renderBasket() {
-  renderBasketItems();
-  renderBasketSummary();
-  renderCartCount();
-  toggleBasketSummaryVisibility();
-}
-
-function renderAll() {
-  renderMenu();
-  renderBasket();
-}
+init();
