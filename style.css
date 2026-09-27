@@ -116,7 +116,7 @@ main {
     }
 
     .rating-count {
-        color: #726D6D;
+        color: #242323;
         font-family: var(--font-base);
         font-size: 1.125rem;
     }
@@ -220,7 +220,7 @@ footer {
 .cart {
     position: relative;
     display: inline-flex;
-    color: var(--primary-clr);
+    color: #ca3f56;
     background-color: transparent;
     border: none;
 

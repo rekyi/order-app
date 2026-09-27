@@ -36,7 +36,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* #endregion */
 
 :root {
-    --primary-clr: #E76C1F;
+    --primary-clr: #5e252e;
     --secondary-clr: #363534;
     --tertiary-clr: #fdeadc;
     --font-base: 'Palanquin', sans-serif;

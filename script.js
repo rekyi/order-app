@@ -28,6 +28,7 @@ renderMenu();
 
 function initBasketDialog() {
   const dialogRef = document.getElementById("basket-dialog");
+  const desktopBreakpoint = window.matchMedia("(min-width: 1000px)");
 
   document.getElementById("cart").addEventListener("click", () => {
     dialogRef.showModal();
@@ -41,6 +42,12 @@ function initBasketDialog() {
 
   dialogRef.addEventListener("close", () => {
     dialogRef.classList.remove("slide-up");
+  });
+
+  desktopBreakpoint.addEventListener("change", (event) => {
+    if (event.matches && dialogRef.open) {
+      dialogRef.close();
+    }
   });
 }
 initBasketDialog();

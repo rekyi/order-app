@@ -41,28 +41,28 @@ const menuArray = [
     items: [
       {
         src: "assets/images/pizza_margherita.webp",
-        name: "Margherita",
+        name: "Margherita Pizza",
         ingredients: ["Tomato Sauce", "Mozzarella"],
         price: 11.9,
         quantity: 0,
       },
       {
         src: "assets/images/pizza_salami.webp",
-        name: "Salami",
+        name: "Salami Pizza ",
         ingredients: ["Tomato slices", "Mozzarella", "Salami"],
         price: 13.9,
         quantity: 0,
       },
       {
         src: "assets/images/pizza_pineapple.webp",
-        name: "Hawaiian",
-        ingredients: ["Prosciutto", "Pineapple", "Tomato Sauce", "Basil"],
+        name: "Special Pineapple Pizza",
+        ingredients: ["BBQ Sauce", "Mozzarella", "Pulled Chicken", "Pineapple", "Red Onions", "Fresh Cilantro"],
         price: 12.9,
         quantity: 0,
       },
       {
         src: "assets/images/pizza_with_ricotta_cheese.webp",
-        name: "Quattro Formaggi With Chicken",
+        name: "Ricotta Cheese Pizza",
         ingredients: ["Prosciutto", "Ricotta Cheese", "Mozzarella", "Tomato Sauce"],
         price: 14.9,
         quantity: 0,
@@ -76,14 +76,14 @@ const menuArray = [
     items: [
       {
         src: "assets/images/rigatoni_with_cream_sauce.webp",
-        name: "Rigatoni",
+        name: "Rigatoni Pasta",
         ingredients: ["Rigatoni Pasta", "Creamy Garlic Sauce", "Pulled Chicken", "Grated Parmesan", "Fresh Chives"],
         price: 13.9,
         quantity: 0,
       },
       {
         src: "assets/images/shrimp_linguine_with_fresh_basil_and-cherry_tomatoes.webp",
-        name: "Shrimp Liguine",
+        name: "Shrimp Liguine Pasta",
         ingredients: ["Linguine Pasta", "Sautéed Shrimp", "Cherry Tomatoes", "Garlic Butter", "Grated Parmesan", "Fresh Basil"],
         price: 15.9,
         quantity: 0,
@@ -91,7 +91,7 @@ const menuArray = [
       {
         src: "assets/images/melting_lasagna_bolognese.webp",
         name: "Lasagne",
-        ingredients: ["Lasagna pasta sheets", "Slow-cooked beef ragù", "Creamy béchamel sauce", "Melted mozzarella", "Grated Parmesan", "Fresh basil"],
+        ingredients: ["Slow-Cooked Beef Ragù", "Creamy Béchamel Sauce", "Melted Mozzarella", "Grated Parmesan", "Fresh Basil"],
         price: 12.9,
         quantity: 0,
       },

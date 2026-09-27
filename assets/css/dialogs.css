@@ -98,7 +98,7 @@
 }
 
 .basket-items::-webkit-scrollbar-thumb {
-    background-color: var(--primary-clr);
+    background-color: #862435;
     border-radius: 10px;
 }
 
@@ -232,7 +232,7 @@
 
 .delivery-fee-free {
     font-weight: 700;
-    color: var(--primary-clr);
+    color: #ca3f56;
     font-size: 1em;
 }
 
