@@ -24,7 +24,6 @@ function renderMenu() {
     }
   }
 }
-renderMenu();
 
 function initBasketDialog() {
   const dialogRef = document.getElementById("basket-dialog");
@@ -50,7 +49,6 @@ function initBasketDialog() {
     }
   });
 }
-initBasketDialog();
 
 function onBackdropClick(event) {
   const dialogRef = event.currentTarget;
@@ -126,16 +124,29 @@ function formatPrice(number) {
 
 function getDeliveryFeeText(deliveryFee) {
   if (deliveryFee === 0) {
-    return `<span class="delivery-fee-original">${formatPrice(DELIVERY_FEE)}</span> <span class="delivery-fee-free">Free</span>`;
+    return `<span class="delivery-fee-original">${formatPrice(DELIVERY_FEE)}</span> <span class="delivery-fee-free">0,00€</span>`;
   } else {
     return formatPrice(deliveryFee);
+  }
+}
+
+function calculateDiscount(subtotal) {
+  if (subtotal >= 50) {
+    return subtotal * 0.05;
+  } else {
+    return 0;
   }
 }
 
 function renderBasketSummary() {
   const subtotal = calculateSubtotal();
   const deliveryFee = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
-  const total = subtotal + deliveryFee;
+  const discount = calculateDiscount(subtotal);
+  const total = subtotal + deliveryFee - discount;
+
+  const discountRowRef = document.getElementById("basket-discount-row");
+  discountRowRef.classList.toggle("hidden", discount === 0);
+  document.getElementById("basket-discount").textContent = `-${formatPrice(discount)}`;
 
   document.getElementById("basket-subtotal").textContent = formatPrice(subtotal);
   document.getElementById("basket-delivery").innerHTML = getDeliveryFeeText(deliveryFee);

@@ -10,6 +10,7 @@
 .basket-dialog {
     inset: auto 0 4.6rem 0;
     width: 23rem;
+    min-height: 33rem;
     margin-inline: auto;
     padding: 1.5rem 1.25rem;
 
@@ -144,6 +145,10 @@
     cursor: pointer;
 }
 
+.basket-remove-btn {
+    transform: translateY(2px);
+}
+
 .basket-item-amount {
     min-width: 1.7em;
     text-align: center;
@@ -227,7 +232,7 @@
     font-family: system-ui, -apple-system, sans-serif;
     text-decoration: line-through;
     opacity: 0.5;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .delivery-fee-free {
