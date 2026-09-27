@@ -3,7 +3,7 @@ function categoryTemplate(category) {
   <section class="menu-section">
     <header class="menu-header">
       <div class="menu-header-content">
-        <img src="${category.iconSrc}" alt="${category.categoryName}" width="128" height="128">
+        <img src="${category.iconSrc}" alt="" width="128" height="128" aria-hidden="true">
         <h2>${category.categoryName}</h2>
       </div>
     </header>
@@ -34,6 +34,14 @@ function productTemplate(product) {
   </article>`;
 }
 
+function categorySliderItemTemplate(category) {
+  return `
+  <a class="category-slider-item" href="#${category.id}">
+    <img src="${category.iconSrc}" alt="" width="128" height="128" aria-hidden="true" />
+    <span>${category.categoryName}</span>
+  </a>`;
+}
+
 function dialogBasketTemplate(item) {
   const linePrice = formatPrice(item.price * item.quantity);
   let removeBtn = "";
@@ -43,7 +51,7 @@ function dialogBasketTemplate(item) {
   } else {
     removeBtn = `
       <button class="basket-remove-btn" type="button" onclick="decreaseQuantity('${item.name}')" aria-label="Remove item">
-        <img src="assets/icons/delete_icon.svg" alt="" width="16" height="18" />
+        <img src="assets/icons/delete_icon.svg" alt="" width="16" height="18" aria-hidden="true" />
       </button>`;
   }
 

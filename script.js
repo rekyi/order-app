@@ -3,6 +3,8 @@ const DELIVERY_FEE = 4.99;
 
 function init() {
   renderMenu();
+  renderCategorySlider();
+  initCategorySlider();
   initBasketDialog();
   renderBasket();
   initConfirmationDialog();
@@ -23,6 +25,25 @@ function renderMenu() {
       categoryWrapper.innerHTML += productTemplate(product);
     }
   }
+}
+
+function renderCategorySlider() {
+  const sliderRef = document.getElementById("category-slider");
+  sliderRef.innerHTML = "";
+
+  for (let categoryIndex = 0; categoryIndex < menuArray.length; categoryIndex++) {
+    const category = menuArray[categoryIndex];
+    sliderRef.innerHTML += categorySliderItemTemplate(category);
+  }
+}
+
+function initCategorySlider() {
+  const btnRef = document.getElementById("hamburger-btn");
+  const sliderRef = document.getElementById("category-slider");
+
+  btnRef.addEventListener("click", () => {
+    sliderRef.classList.toggle("open");
+  });
 }
 
 function initBasketDialog() {

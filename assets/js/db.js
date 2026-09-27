@@ -36,7 +36,7 @@ const menuArray = [
   },
   {
     id: "pizza-menu",
-    categoryName: "Pizza (30cm)",
+    categoryName: "Pizza",
     iconSrc: "assets/icons/pizza_icon.webp",
     items: [
       {

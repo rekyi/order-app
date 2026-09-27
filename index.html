@@ -15,7 +15,12 @@
     <header class="main-header">
       <div class="header-content">
         <img src="assets/icons/order_app_logo.svg" alt="Bestell App logo" width="90" height="43" />
-        <img class="hamburger-icon" src="assets/icons/hamburger_menu_icon.svg" alt="" width="45" height="35" aria-hidden="true" />
+        <div class="hamburger-icon">
+          <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Categories" aria-expanded="false" aria-controls="category-slider">
+            <img src="assets/icons/hamburger_menu_icon.svg" alt="" width="45" height="35" aria-hidden="true" />
+          </button>
+          <nav class="category-slider" id="category-slider" aria-label="Categories"></nav>
+        </div>
       </div>
     </header>
     <main>
