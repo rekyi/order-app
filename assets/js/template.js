@@ -11,17 +11,7 @@ function categoryTemplate(category) {
   </section>`;
 }
 
-function productTemplate(product) {
-  const ingredientsText = product.ingredients.join(", ");
-  const formattedPrice = formatPrice(product.price);
-  const displayQuantity = product.quantity > 99 ? "99+" : product.quantity;
-  let addBtn = "";
-
-  if (product.quantity > 0) {
-    addBtn = `<button class="add-btn" disabled>Added <span class="add-btn-count">${displayQuantity}</span></button>`;
-  } else {
-    addBtn = `<button class="add-btn" onclick="increaseQuantity('${product.name}')">Add to basket</button>`;
-  }
+function productTemplate(product, ingredientsText, formattedPrice, addBtn) {
   return `
   <article class="product-card">
     <img class="product-image" src="${product.src}" alt="" width="800" height="800" loading="lazy" />
@@ -34,6 +24,23 @@ function productTemplate(product) {
   </article>`;
 }
 
+function addBtnTemplate(name) {
+  return `<button class="add-btn" onclick="addFromMenu('${name}')">Add to basket</button>`;
+}
+
+function addedBtnTemplate(name, quantityText) {
+  return `<button class="add-btn" onclick="expandMenuItem('${name}')">Added <span class="add-btn-count">${quantityText}</span></button>`;
+}
+
+function stepperTemplate(name, quantityText) {
+  return `
+    <div class="add-stepper">
+      <button class="stepper-btn" type="button" onclick="decreaseQuantity('${name}')" aria-label="Decrease quantity">-</button>
+      <span class="add-btn-count">${quantityText}</span>
+      <button class="stepper-btn" type="button" onclick="increaseQuantity('${name}')" aria-label="Increase quantity">+</button>
+    </div>`;
+}
+
 function categorySliderItemTemplate(category) {
   return `
   <a class="category-slider-item" href="#${category.id}">
@@ -42,25 +49,13 @@ function categorySliderItemTemplate(category) {
   </a>`;
 }
 
-function dialogBasketTemplate(item) {
-  const linePrice = formatPrice(item.price * item.quantity);
-  let removeBtn = "";
-
-  if (item.quantity > 1) {
-    removeBtn = `<button class="basket-remove-btn" type="button" onclick="decreaseQuantity('${item.name}')" aria-label="Decrease quantity">-</button>`;
-  } else {
-    removeBtn = `
-      <button class="basket-remove-btn" type="button" onclick="decreaseQuantity('${item.name}')" aria-label="Remove item">
-        <img src="assets/icons/delete_icon.svg" alt="" width="16" height="18" aria-hidden="true" />
-      </button>`;
-  }
-
+function dialogBasketTemplate(item, linePrice) {
   return `
     <li class="basket-item">
       <h3 class="basket-item-title">${item.name}</h3>
       <div class="basket-item-footer">
         <div class="basket-item-controls">
-          ${removeBtn}
+          <button class="basket-remove-btn" type="button" onclick="decreaseQuantity('${item.name}')" aria-label="Decrease quantity">-</button>
           <span class="basket-item-amount">${item.quantity}</span>
           <button class="basket-add-btn" type="button" onclick="increaseQuantity('${item.name}')" aria-label="Increase quantity">+</button>
         </div>

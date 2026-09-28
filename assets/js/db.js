@@ -133,7 +133,7 @@ const menuArray = [
       {
         src: "assets/images/spinach_pomegranate_and_chicken_salad.webp",
         name: "Spinach Pomegranate Chicken Salad",
-        ingredients: ["Baby spinach", "Grilled Chicken Breast", "Pomegranate Seeds", "Balsamic-Herb Dressing"],
+        ingredients: ["Baby spinach", "Grilled Chicken", "Pomegranate Seeds", "Balsamic"],
         price: 11.9,
         quantity: 0,
       },
@@ -147,14 +147,14 @@ const menuArray = [
       {
         src: "assets/images/tiramisu.webp",
         name: "Tiramisu",
-        ingredients: ["Ladyfingers Soaked In Espresso", "Mascarpone Cream", "Dark Chocolate", "Cocoa Powder", "Fresh Mint"],
+        ingredients: ["Ladyfingers Soaked In Espresso", "Mascarpone", "Dark Chocolate", "Cocoa Powder", "Fresh Mint"],
         price: 7.9,
         quantity: 0,
       },
       {
         src: "assets/images/matcha_layer_cake_with_cherries_and_almonds.webp",
         name: "Layered Matcha Cake",
-        ingredients: ["Matcha Mousse Layer", "Dark Chocolate Ganache", "Crunchy Biscuit Base", "Fresh Cherries", "Slivered Almonds", "Matcha Powder Dusting"],
+        ingredients: ["Matcha Mousse", "Dark Chocolate", "Biscuit Base", "Cherries"],
         price: 8.9,
         quantity: 0,
       },
@@ -168,7 +168,7 @@ const menuArray = [
       {
         src: "assets/images/creamy_key_lime_pie_with_whipped_topping.webp",
         name: "Zesty Lime Cream Pie",
-        ingredients: ["Graham Cracker Crust", "Key Lime Filling", "Whipped Cream", "Lime Zest", "Fresh Lime Slice"],
+        ingredients: ["Graham Cracker", "Key Lime", "Whipped Cream", "Lime Zest"],
         price: 8.9,
         quantity: 0,
       },

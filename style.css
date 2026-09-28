@@ -15,10 +15,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .hamburger-icon {
-        position: relative;
-    }
 }
 
 .order-logo {
@@ -26,12 +22,27 @@ body {
     height: auto;
 }
 
+.hamburger-icon {
+    position: relative;
+}
+
 .hamburger-btn {
-    display: inline-flex;
-    padding: 0;
+    margin-right: 0.5rem;
+    padding: 0.6rem 0;
+
+    color: #ffffff;
+    font-family: var(--font-base);
+    font-size: 0.85rem;
     background: transparent;
     border: none;
+    border-block: 2px solid #ffffff;
+
     cursor: pointer;
+}
+
+.hamburger-btn:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
 }
 
 .category-slider {
@@ -93,11 +104,9 @@ main {
 
 .hero picture img {
     width: 100%;
-    height: 22rem;
-
-    @media (min-width: 1000px) {
-        height: 31rem;
-    }
+    height: clamp(22rem, 38vw, 35rem);
+    object-fit: cover;
+    object-position: center 20%;
 }
 
 .hero-logo {

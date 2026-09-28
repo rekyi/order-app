@@ -10,7 +10,7 @@
 .basket-dialog {
     inset: auto 0 4.6rem 0;
     width: 23rem;
-    min-height: 30rem;
+    min-height: 40rem;
     margin-inline: auto;
     padding: 1.5rem 1.25rem;
 
@@ -83,7 +83,7 @@
 }
 
 .basket-items {
-    max-height: 23rem;
+    height: 23rem;
     margin: 0 0 1.5rem 0;
     padding: 0;
 
@@ -147,7 +147,7 @@
 }
 
 .basket-remove-btn {
-    transform: translateY(3px);
+    transform: translateY(1px);
 }
 
 .basket-item-amount {
@@ -212,7 +212,7 @@
 #basket-items:empty::after {
     margin: auto;
     content: "";
-    width: 264px;
+    width: 230px;
     height: 230px;
     background-image: url("../images/empty_basket_filler.webp");
     background-repeat: no-repeat;
