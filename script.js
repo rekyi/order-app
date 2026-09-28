@@ -66,7 +66,15 @@ function initCategorySlider() {
   const sliderRef = document.getElementById("category-slider");
 
   btnRef.addEventListener("click", () => {
-    sliderRef.classList.toggle("open");
+    const isOpen = sliderRef.classList.toggle("open");
+    btnRef.setAttribute("aria-expanded", isOpen);
+  });
+
+  sliderRef.addEventListener("click", (event) => {
+    if (event.target.closest(".category-slider-item")) {
+      sliderRef.classList.remove("open");
+      btnRef.setAttribute("aria-expanded", "false");
+    }
   });
 }
 
